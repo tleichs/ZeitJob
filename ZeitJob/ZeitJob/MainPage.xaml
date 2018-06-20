@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ZeitJob"
+             x:Class="ZeitJob.MainPage">
+
+    <StackLayout>
+        
+        <StackLayout  x:Name="slsign" IsVisible="True" Padding="5,10">
+
+            <Label Text="Willkommen zur App der Zeitarbeitfirma" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" />
+
+            <Button
+            Text="Einloggen"
+            x:Name="btnsignup"/>
+        </StackLayout>
+
+        <StackLayout x:Name="slUser" IsVisible="False" Padding="5,10">
+            <Label Text="Name" FontAttributes="Bold" />
+            <Label x:Name="lblName" />
+            <Button
+                    Text="zum Profil"
+                    x:Name="btntodo"/>
+        </StackLayout>
+        <StackLayout>
+            <ActivityIndicator
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsRunning="{Binding IsBusy}"
+                       x:Name="syncIndicator"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
